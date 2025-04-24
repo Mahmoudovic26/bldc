@@ -94,18 +94,19 @@
  * 17 (3):  IN2
  */
 
-#define HW_ADC_CHANNELS			18
+#define HW_ADC_CHANNELS			18 
 #define HW_ADC_INJ_CHANNELS		3
 #define HW_ADC_NBR_CONV			6
 
 // ADC Indexes
-#define ADC_IND_SENS1			3
-#define ADC_IND_SENS2			4
-#define ADC_IND_SENS3			5
-#define ADC_IND_CURR1			0
-#define ADC_IND_CURR2			1
-#define ADC_IND_CURR3			2
-#define ADC_IND_VIN_SENS		11
+#define ADC_IND_SENS1			3 // new phase A volt
+#define ADC_IND_SENS2			4 // new phase B volt
+#define ADC_IND_SENS3			5 // new phase C volt
+
+#define ADC_IND_CURR1			0 //new current A
+#define ADC_IND_CURR2			1 // new current B
+#define ADC_IND_CURR3			2 // new current C
+#define ADC_IND_VIN_SENS	8  // new dc bus volt
 #define ADC_IND_EXT				8
 #define ADC_IND_EXT2			15
 #define ADC_IND_TEMP_MOS		10
@@ -193,12 +194,13 @@
 #define HW_I2C_SDA_PIN			11
 
 // Hall/encoder pins
-#define HW_HALL_ENC_GPIO1		GPIOC
-#define HW_HALL_ENC_PIN1		6
-#define HW_HALL_ENC_GPIO2		GPIOC
-#define HW_HALL_ENC_PIN2		7
-#define HW_HALL_ENC_GPIO3		GPIOC
-#define HW_HALL_ENC_PIN3		8
+#define HW_HALL_ENC_GPIO1		GPIOB // new hall
+#define HW_HALL_ENC_PIN1		5 // new
+#define HW_HALL_ENC_GPIO2		GPIOB // new
+#define HW_HALL_ENC_PIN2		6 // new 
+#define HW_HALL_ENC_GPIO3		GPIOB // new
+#define HW_HALL_ENC_PIN3		7  //new
+
 #define HW_ENC_TIM				TIM3
 #define HW_ENC_TIM_AF			GPIO_AF_TIM3
 #define HW_ENC_TIM_CLK_EN()		RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE)
